@@ -1,16 +1,9 @@
-CREATE TYPE gender_enum AS ENUM (
-    'female',
-    'male',
-    'prefer_not_to_say'
-);
 
 CREATE TABLE users (
                        id SERIAL PRIMARY KEY,
                        username VARCHAR(50) NOT NULL UNIQUE,
                        email VARCHAR(100) NOT NULL UNIQUE,
                        password_hash VARCHAR(255) NOT NULL,
-                       avatar_url TEXT,
-                       gender gender_enum,
                        created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
 
 );
