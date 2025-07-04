@@ -1,4 +1,6 @@
 package com.example.MovieApp.movie.infrastructure.persistence;
 
-public class JpaMovieRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface JpaMovieRepository extends JpaRepository <MovieEntity, Long> {
 }

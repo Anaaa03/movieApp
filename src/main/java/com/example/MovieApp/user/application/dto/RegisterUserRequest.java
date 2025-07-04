@@ -1,12 +1,14 @@
 package com.example.MovieApp.user.application.dto;
 
-import com.example.MovieApp.user.domain.Email;
-import lombok.Value;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import lombok.AllArgsConstructor;
 
-@Value
-public class RegisterUserCommand {
-    String username;
-    Email email;
-    String password;
+@Data
+public class RegisterUserRequest {
+    private String username;
+    private String email;
+    private String password;
 }
+
 

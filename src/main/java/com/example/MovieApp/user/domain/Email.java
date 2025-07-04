@@ -1,15 +1,14 @@
-package com.example.MovieApp.domain.user;
+package com.example.MovieApp.user.domain;
 
+import lombok.NonNull;
 import lombok.Value;
 
 @Value
 public class Email {
+    @NonNull
     String value;
 
-    public Email(String value) {
-        if (!value.matches("^[\\w-\\.]+@([\\w-]+\\.)+[\\w-]{2,4}$")) {
-            throw new IllegalArgumentException("Invalid email");
-        }
+    public Email(@NonNull String value) {
         this.value = value;
     }
 }

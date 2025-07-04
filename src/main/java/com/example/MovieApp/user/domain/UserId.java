@@ -1,14 +1,15 @@
-package com.example.MovieApp.domain.user;
+package com.example.MovieApp.user.domain;
 
+import lombok.NonNull;
 import lombok.Value;
 
-import java.util.UUID;
 
 @Value
 public class UserId {
-    UUID value;
+    @NonNull
+    Long value;
 
-    public static UserId generate() {
-        return new UserId(UUID.randomUUID());
+    public UserId(@NonNull Long value) {
+        this.value = value;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.MovieApp.infrastructure.persistence.user;
+package com.example.MovieApp.user.infrastructure.persistence;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.Instant;
-import java.util.UUID;
 
 @Entity
 @Table(name = "users")
@@ -30,5 +29,5 @@ public class UserEntity {
     @Column(name = "created_at")
     private Instant createdAt;
 
-    private boolean active;
+    //private boolean active;
 }
